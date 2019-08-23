@@ -20,9 +20,34 @@
  * 
  * 
  */
-package Especialista
+package Especialista;
+import Matematica.Retangulo;
 
 public class EngenheiroCivil{
 	
+	private String nome;
+	private int idade;
+	private double ladoH = 4.7;
+	private double ladoV = 8.2;
+	
+	public EngenheiroCivil(String nome, int idade){
+		this.nome = nome;
+		this.idade = idade;
+	}
+	
+	private void exibir_dados_pessoais(){
+		System.out.println(nome);
+		System.out.println(idade + "anos");
+		System.out.println();
+	}
+	
+	public void main(){
+		this.exibir_dados_pessoais();
+		Retangulo retangulo = new Retangulo();
+		retangulo.definir_lados(this.ladoH,this.ladoV);
+		System.out.printf("%.2f", retangulo.area);
+		System.out.printf("%.2f", retangulo.perimetro);
+	}
+
 }
 
